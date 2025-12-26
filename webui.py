@@ -1093,7 +1093,12 @@ def main():
     config_dict = default_config()
 
     demo = create_ui(config_dict, theme_name=args.theme)
-    demo.launch(server_name=args.ip, server_port=args.port)
+    demo.launch(
+    server_name="0.0.0.0",
+    server_port=7860,
+    share=True
+    )
+
 
 if __name__ == '__main__':
     main()
